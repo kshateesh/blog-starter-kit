@@ -9,19 +9,17 @@ export default function Index() {
 
   const heroPost = allPosts[0];
 
-  const morePosts = allPosts.slice(1);
+  const morePosts = allPosts.slice(1, 11);
 
   return (
     <main>
       <Container>
         <Intro />
         <HeroPost
-          title={heroPost.title}
+          artist={heroPost.artist}
+          description={heroPost.description}
           coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
+          genre={heroPost.genre}
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
